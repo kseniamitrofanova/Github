@@ -20,7 +20,7 @@ public class JUnitFound {
         Configuration.pageLoadStrategy = "eager";
     }
     @Test
-    void FindJUnit5(){
+    void findJUnit5(){
         open("/selenide/selenide");
         $("#wiki-tab").click();
         $("[placeholder='Find a page…']").setValue("SoftAssertions").pressEnter();
