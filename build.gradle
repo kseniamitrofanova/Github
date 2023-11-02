@@ -6,6 +6,10 @@ repositories {
     mavenCentral()
 }
 
+compileTestJava{
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     testImplementation(
             "org.junit.jupiter:junit-jupiter:5.10.0",
@@ -15,5 +19,5 @@ dependencies {
 }
 
 test{
-    useJUnitPlatform()
+    useJUnitPlatform ()
 }
