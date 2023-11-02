@@ -16,11 +16,12 @@ public class JUnitFound {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://github.com";
         Configuration.pageLoadStrategy = "eager";
     }
     @Test
     void FindJUnit5(){
-        open("https://github.com/selenide/selenide");
+        open("/selenide/selenide");
         $("#wiki-tab").click();
         $("[placeholder='Find a page…']").setValue("SoftAssertions").pressEnter();
         $("#wiki-pages-box").shouldHave(text("SoftAssertion"));
